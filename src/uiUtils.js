@@ -5,7 +5,7 @@ import { state } from "./State.js";
 import "./style.css";
 
 // Output public assets into dist via Webpack
-import Background from "../public/assets/image_sample.png";
+// import Background from "../public/assets/image_sample.png";
 import Icon180Px from "../public/logo180.png";
 import Icon192Px from "../public/logo192.png";
 import Icon512Px from "../public/logo512.png";
@@ -163,7 +163,7 @@ const getPuzzleFromGrid = () => {
 };
 
 // Adds onclick listeners, sets initial puzzle state, adds initial CSS style toggles
-const initializeUiElements = () => {
+const initializeUiElements = (imageInfo) => {
   initializeDropdownAlgorithms();
 
   // Button onclick event listeners
@@ -259,7 +259,9 @@ const initializeUiElements = () => {
   // Unable to inherit this from the grid-container
   borderCss.innerHTML = ".grid-item::before { padding: 1px; }";
   borderCss.innerHTML += ".grid-item { border: 1px solid black; padding: 1px }";
-  backgroundCss.innerHTML = `.grid-item::before { background-image: url('${Background}'); }`;
+
+  backgroundCss.innerHTML = `.grid-item::before { background-image: url('${imageInfo}'); }`;
+  //   backgroundCss.innerHTML = `.grid-item::before { background-image: url('${Background}'); }`;
 
   // Make goal puzzle a default goal state with current size
   state.goalPuzzle = new Puzzle(state.puzzleRows, state.puzzleCols, false);

@@ -1,7 +1,8 @@
 #editGoalBtn,
 #randomizeBtn,
 #solveBtn,
-#algorithmsDropdown {
+#algorithmsDropdown,
+#editInputsContainer {
   display: none;
 }
 
@@ -131,7 +132,7 @@
 .fontButtons {
   font-size: max(2.5vh, 1vw);
   padding: min(0.4vh, 1vw);
-  color: black;
+  color: #404040;
 }
 
 .svgButtons {
