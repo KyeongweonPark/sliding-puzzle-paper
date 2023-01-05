@@ -335,7 +335,7 @@ const enableStartEditMode = () => {
 
   disableGoalEditMode();
   disablePlayMode();
-  title.textContent = "Editing Start";
+  title.textContent = "그리운 얼굴을 찾아서...";
 };
 
 const enableGoalEditMode = () => {
