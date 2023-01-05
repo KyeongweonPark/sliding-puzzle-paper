@@ -23,7 +23,9 @@
     "build": "webpack --config webpack.config.cjs --mode production",
     "test": "mocha './tests/*.test.js' --require esm --timeout 0",
     "testFull": "FULL_TEST_SUITE=true mocha './tests/*.test.js' --require esm --timeout 0",
-    "testStrategic": "mocha './tests/strategic*.test.js' --require esm --timeout 0"
+    "testStrategic": "mocha './tests/strategic*.test.js' --require esm --timeout 0",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "type": "module",
   "repository": {
@@ -35,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/jweilhammer/SlidingPuzzle/issues"
   },
-  "homepage": "https://github.com/jweilhammer/SlidingPuzzle#readme"
+  "homepage": "https://kyeongweonpark.github.io/sliding-puzzle-paper/",
+  "dependencies": {
+    "gh-pages": "^4.0.0"
+  }
 }
